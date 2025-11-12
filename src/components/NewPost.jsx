@@ -35,7 +35,13 @@ function NewPost({ onCancel, onAddPost }) {
     <form className={classes.form} onSubmit={submitHandler}>
       <p>
         <label htmlFor="body">Text</label>
-        <textarea id="body" required rows={3} onChange={bodyChangeHandler} />
+        <textarea
+          id="body"
+          required
+          rows={3}
+          onChange={bodyChangeHandler}
+          maxLength={50}
+        />
       </p>
 
       <p>
